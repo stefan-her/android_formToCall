@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">formtocall</string>
+    <string name="title_pg">Insert your profile</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="insert">Insert</string>
+    <string name="welcome">Welcome</string>
+    <string name="call">Call</string>
+    <string name="back">Back</string>
+    <string name="mobile">Mobile</string>
+</resources>
