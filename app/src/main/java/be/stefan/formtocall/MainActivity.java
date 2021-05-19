@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView cond = (TextView) findViewById(R.id.condition);
         cond.setOnClickListener((View v) -> {
-            Log.d(TAG,"Condition general");
+            Log.d(TAG,"Conditions generales");
             Intent i = new Intent(MainActivity.this, condition.class);
             startActivity(i);
         });
