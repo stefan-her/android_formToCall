@@ -20,17 +20,20 @@ public class MainActivity extends AppCompatActivity {
 
         Button bt_insert = (Button) findViewById(R.id.insert);
         bt_insert.setOnClickListener((View v) -> {
-            EditText firstName = (EditText) findViewById(R.id.first_name);
-            EditText lastName = (EditText) findViewById(R.id.last_name);
-            EditText phone = (EditText) findViewById(R.id.phone);
-
-            Intent i = new Intent(MainActivity.this, welcome.class);
-            i.putExtra("firstName", firstName.getText().toString());
-            i.putExtra("lastName", lastName.getText().toString());
-            i.putExtra("phone", phone.getText().toString());
-            startActivityForResult(i, CODE_ACTIVITE);
-
+            activity();
         });
+    }
+
+    private void activity() {
+        EditText firstName = (EditText) findViewById(R.id.first_name);
+        EditText lastName = (EditText) findViewById(R.id.last_name);
+        EditText phone = (EditText) findViewById(R.id.phone);
+
+        Intent i = new Intent(MainActivity.this, welcome.class);
+        i.putExtra("firstName", firstName.getText().toString());
+        i.putExtra("lastName", lastName.getText().toString());
+        i.putExtra("phone", phone.getText().toString());
+        startActivityForResult(i, CODE_ACTIVITE);
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
