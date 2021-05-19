@@ -4,67 +4,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="30dp">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:fillViewport="true">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/title_pg"
-            android:textSize="40dp"
-            android:layout_marginBottom="40dp"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp">
 
-        <EditText
-            android:id="@+id/first_name"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="20dp"
-            android:hint="@string/first_name"
-            android:inputType="textPersonName"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_pg"
+                android:textSize="40dp"
+                android:layout_marginBottom="40dp"/>
 
-        <EditText
-            android:id="@+id/last_name"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="20dp"
-            android:hint="@string/last_name"
-            android:inputType="textPersonName"/>
-
-        <EditText
-            android:id="@+id/phone"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="20dp"
-            android:hint="@string/mobile"
-            android:inputType="phone"/>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <EditText
+                android:id="@+id/first_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:gravity="center"
-                >
+                android:layout_marginBottom="20dp"
+                android:hint="@string/first_name"
+                android:inputType="textPersonName"/>
 
-                <Button
-                    android:id="@+id/insert"
-                    android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/last_name"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/mobile"
+                android:inputType="phone"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="@string/insert"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center"
+                    >
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+                    <Button
+                        android:id="@+id/insert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="@string/insert"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </LinearLayout>
-
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
