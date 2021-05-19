@@ -20,33 +20,21 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/title_pg"
-                android:textSize="40dp"
-                android:layout_marginBottom="40dp"/>
-
-            <EditText
-                android:id="@+id/first_name"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:layout_marginBottom="20dp"
-                android:hint="@string/first_name"
-                android:inputType="textPersonName"/>
+                android:textStyle="bold"
+                android:text="@string/lorem_Ipsum" />
 
-            <EditText
-                android:id="@+id/last_name"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:hint="@string/last_name"
-                android:inputType="textPersonName"/>
+                android:text="@string/lorem_Ipsum" />
 
-            <EditText
-                android:id="@+id/phone"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:hint="@string/mobile"
-                android:inputType="phone"/>
+                android:text="@string/lorem_Ipsum" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -59,26 +47,19 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/condition"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="@string/user_condition"
-                        android:clickable="true"
-                        android:onClick="handleOnClick"
-                        android:layout_marginBottom="20dp"/>
 
                     <Button
-                        android:id="@+id/insert"
+                        android:id="@+id/close"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/insert" />
+                        android:text="@string/close" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
+
     </ScrollView>
+
 </LinearLayout>

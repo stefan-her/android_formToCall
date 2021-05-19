@@ -4,19 +4,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final int CODE_ACTIVITE = 1;
+    String TAG = "Log ---->";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView cond = (TextView) findViewById(R.id.condition);
+        cond.setOnClickListener((View v) -> {
+            Log.d(TAG,"Condition general");
+            Intent i = new Intent(MainActivity.this, condition.class);
+            startActivity(i);
+        });
 
         Button bt_insert = (Button) findViewById(R.id.insert);
         bt_insert.setOnClickListener((View v) -> {
