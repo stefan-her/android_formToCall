@@ -27,13 +27,13 @@ public class welcome extends AppCompatActivity {
             lastName.setText(elements.getString("lastName"));
 
             Button bt_call = (Button) findViewById(R.id.call);
-            bt_call.setOnClickListener((View v) -> {
+            bt_call.setOnClickListener(v -> {
                 this.call(elements.getString("phone"));
             });
         }
 
         Button bt_back = (Button) findViewById(R.id.back);
-        bt_back.setOnClickListener((View v) -> {
+        bt_back.setOnClickListener(v -> {
             setResult(RESULT_CANCELED);
             finish();
         });

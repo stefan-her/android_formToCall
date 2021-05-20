@@ -14,7 +14,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private static final int CODE_ACTIVITE = 1;
-    String TAG = "Log ---->";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,19 +21,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView cond = (TextView) findViewById(R.id.condition);
-        cond.setOnClickListener((View v) -> {
-            Log.d(TAG,"Conditions generales");
+        cond.setOnClickListener(v -> {
+            Log.d("Log ---->","Conditions generales");
             Intent i = new Intent(MainActivity.this, condition.class);
             startActivity(i);
         });
 
         Button bt_insert = (Button) findViewById(R.id.insert);
-        bt_insert.setOnClickListener((View v) -> {
-            activity();
+        bt_insert.setOnClickListener(v -> {
+            activity(v);
         });
     }
 
-    private void activity() {
+    private void activity(View v) {
+        Log.d("Log ---->", String.valueOf(v.getId()));
         EditText firstName = (EditText) findViewById(R.id.first_name);
         EditText lastName = (EditText) findViewById(R.id.last_name);
         EditText phone = (EditText) findViewById(R.id.phone);
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_CANCELED) {
             EditText firstName = (EditText) findViewById(R.id.first_name);
-            String text = String.format("Bye Bye : %s", firstName.getText().toString());
+            String text = String.format(getString(R.string.Bye), firstName.getText().toString());
 
             Toast.makeText(MainActivity.this, text, Toast.LENGTH_LONG).show();
         }

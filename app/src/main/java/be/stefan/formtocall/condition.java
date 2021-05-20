@@ -16,7 +16,7 @@ public class condition extends AppCompatActivity {
 
 
         Button bt_close = (Button) findViewById(R.id.close);
-        bt_close.setOnClickListener((View v) -> {
+        bt_close.setOnClickListener(v -> {
             finish();
         });
     }
