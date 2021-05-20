@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
         EditText phone = (EditText) findViewById(R.id.phone);
 
         Intent i = new Intent(MainActivity.this, welcome.class);
-        i.putExtra("firstName", firstName.getText().toString());
-        i.putExtra("lastName", lastName.getText().toString());
-        i.putExtra("phone", phone.getText().toString());
+        i.putExtra(welcome.WELCOME_FIRSTNAME, firstName.getText().toString());
+        i.putExtra(welcome.WELCOME_LASTNAME, lastName.getText().toString());
+        i.putExtra(welcome.WELCOME_PHONE, phone.getText().toString());
         startActivityForResult(i, CODE_ACTIVITE);
     }
 

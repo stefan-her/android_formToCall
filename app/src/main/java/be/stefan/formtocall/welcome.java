@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 public class welcome extends AppCompatActivity {
 
+    public static final String WELCOME_FIRSTNAME = "firstName";
+    public static final String WELCOME_LASTNAME = "lastName";
+    public static final String WELCOME_PHONE = "phone";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -23,12 +27,12 @@ public class welcome extends AppCompatActivity {
             TextView lastName = (TextView) findViewById(R.id.last_name);
             String phone = new String();
 
-            firstName.setText(elements.getString("firstName"));
-            lastName.setText(elements.getString("lastName"));
+            firstName.setText(elements.getString(WELCOME_FIRSTNAME));
+            lastName.setText(elements.getString(WELCOME_LASTNAME));
 
             Button bt_call = (Button) findViewById(R.id.call);
             bt_call.setOnClickListener(v -> {
-                this.call(elements.getString("phone"));
+                this.call(elements.getString(WELCOME_PHONE));
             });
         }
 
