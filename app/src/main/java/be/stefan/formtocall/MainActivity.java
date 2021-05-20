@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         TextView cond = (TextView) findViewById(R.id.condition);
         cond.setOnClickListener(v -> {
             Log.d("Log ---->","Conditions generales");
-            Intent i = new Intent(MainActivity.this, condition.class);
+            Intent i = new Intent(getApplicationContext(), condition.class);
             startActivity(i);
         });
 
@@ -49,10 +49,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_CANCELED) {
-            EditText firstName = (EditText) findViewById(R.id.first_name);
-            String text = String.format(getString(R.string.Bye), firstName.getText().toString());
+            Bundle elements = this.getIntent().getExtras();
+            String text = String.format(getString(R.string.Bye), data.getStringExtra(welcome.WELCOME_MSG));
 
-            Toast.makeText(MainActivity.this, text, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
         }
     }
 }

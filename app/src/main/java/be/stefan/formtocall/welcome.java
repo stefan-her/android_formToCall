@@ -14,6 +14,7 @@ public class welcome extends AppCompatActivity {
     public static final String WELCOME_FIRSTNAME = "firstName";
     public static final String WELCOME_LASTNAME = "lastName";
     public static final String WELCOME_PHONE = "phone";
+    public static final String WELCOME_MSG = "msg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,9 @@ public class welcome extends AppCompatActivity {
 
         Button bt_back = (Button) findViewById(R.id.back);
         bt_back.setOnClickListener(v -> {
-            setResult(RESULT_CANCELED);
+            Intent i = new Intent();
+            i.putExtra(WELCOME_MSG, elements.getString(WELCOME_FIRSTNAME) + ":(");
+            setResult(RESULT_CANCELED, i);
             finish();
         });
     }
